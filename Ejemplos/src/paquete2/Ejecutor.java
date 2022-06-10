@@ -6,6 +6,7 @@
 package paquete2;
 import paquete1.Edificio;
 import paquete1.Empresa;
+import paquete1.Vehiculos;
 /**
  *
  * @author reroes
@@ -30,10 +31,21 @@ public class Ejecutor {
         MiEmpresa.establecerEdificios(listaEdificios);
         MiEmpresa.establecercostoBienesInmuebles();
         
+        Vehiculos vehs1 = new Vehiculos("Auto", "lbb0011",10000);
+        Vehiculos vehs2 = new Vehiculos("Camioneta", "lbc0011",20000);
+        Vehiculos vehs3 = new Vehiculos("Auto", "lbd0012",6000);
+        Vehiculos vehs4 = new Vehiculos("Camioneta", "lcc0011",10000);
+        Vehiculos vehs5 = new Vehiculos("Camioneta", "ldc0011",25000);
         
+        Vehiculos[] listaVehiculos = {vehs1,vehs2,vehs3,vehs4,vehs5};
         System.out.printf("%s\n", MiEmpresa);
         
-        
+        MiEmpresa.establecerNombre("Empresa de Hojas");
+        MiEmpresa.establecerEdificios(listaEdificios);
+        MiEmpresa.establecercostoBienesInmuebles();
+        MiEmpresa.establecerVehiculos(listaVehiculos);       
+        MiEmpresa.establecercostovehiculos();
+        MiEmpresa.establecercostoTotalBienes();
         //System.out.printf("%.2f\n" , MiEmpresa.obtenercostoBienesInmuebles());
         //double c = listaEdificios[2].obtenerCosto();
         //System.out.println(c);

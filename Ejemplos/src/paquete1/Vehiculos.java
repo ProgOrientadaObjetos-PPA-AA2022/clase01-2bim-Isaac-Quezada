@@ -43,4 +43,10 @@ public class Vehiculos {
     public double obtenerValor(){
         return valor;
     }    
+    @Override
+        public String toString(){
+            String cadena = String.format("Tipo del vehiculo: %s\n Matricula: %s\n"
+                    + "Costo del Vehiculo: %.2f\n",tipo, matricula, valor);
+        return cadena; 
+        }   
 }
